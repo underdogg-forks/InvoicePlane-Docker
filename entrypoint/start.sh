@@ -10,9 +10,10 @@ then
   cp /invoiceplane_setup/config.php /app/application/config/
   cp /invoiceplane_setup/index.php /app/index.php
   cp /invoiceplane_setup/database.php /app/application/config/
+  touch /app/ipconfig;
   rm /app/.configureme
   chown -R root:$APPLICATION_USER /app
-  chmod -R 775 /app/uploads; chmod 775 /app/application/{config,logs}
+  chmod -R 775 /app/{uploads,ipconfig}; chmod 775 /app/application/{config,logs}
   composer install -d /app
 fi
 /entrypoint.cmd/supervisord.sh
