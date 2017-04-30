@@ -7,3 +7,4 @@ COPY invoiceplane_setup /invoiceplane_setup
 COPY entrypoint/start.sh /
 RUN chmod 755 /start.sh
 EXPOSE 80
+ENTRYPOINT /start.sh
