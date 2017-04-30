@@ -7,7 +7,7 @@ First of all, you need to `docker pull coelis/invoiceplane` to download the cont
 Once the container has been downloaded, you have to run a MariaDB / MySQL container (the database container):  
 `docker run --name ip-mariadb -e MYSQL_ROOT_PASSWORD=RandomPasswordGoesHere -d mariadb:latest`  
 When the container is started, you're ready to link the InvoicePlane container with the following command:  
-`docker run -p 8000:80 --name ip --entrypoint=/start.sh --link ip-mariadb:mysql coelis/invoiceplane` (where 8000 is the port you want to expose your container to)  
+`docker run -p 8000:80 --name ip --link ip-mariadb:mysql coelis/invoiceplane` (where 8000 is the port you want to expose your container to)  
   
 Wait till it start, then visit http://localhost:8000/setup to get started: you'll have to setup an account and you'll be good to go, enjoy!  
   
