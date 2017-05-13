@@ -1,5 +1,5 @@
 # Invoiceplane
-This container has a ready-to-go instance of [Invoiceplane](https://invoiceplane.com).  
+This container has a ready-to-go instance of [Invoiceplane](https://invoiceplane.com) (from [Coelis](https://gh.coel.is/)'s [branch](https://gh.coel.is/InvoicePlane)).  
 Follow the installation instructions to understand how to get started with Invoiceplane  
 
 ## Installation Instructions
