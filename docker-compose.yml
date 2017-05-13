@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: coelis/invoiceplane
+    env_file: .env.production
+    ports:
+    - "5000:80"
+    volumes:
+    - ./data/logs/:/var/log
+    depends_on:
+    - mariadb
+  mariadb:
+    image: mariadb
+    env_file: .env.production
+    volumes:
+      - ./data/mysql/:/var/lib/mysql
