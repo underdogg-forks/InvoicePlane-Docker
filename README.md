@@ -18,4 +18,4 @@ docker-compose up
 ### Platform
 
 Once your containers are up,
-visit http://localhost:8000/setup, create a new account and enjoy!
+visit http://localhost:5000/, create a new account and enjoy!
