@@ -8,6 +8,7 @@ services:
     - "5000:80"
     volumes:
     - ./data/logs/:/var/log
+    - ./data/uploads/:/app/uploads
     depends_on:
     - mariadb
   mariadb:
