@@ -12,6 +12,7 @@ then
   sed -i "s/%{IP_USER}/${MYSQL_USER}/" /app/ipconfig.php
   sed -i "s/%{IP_PASSWORD}/${MYSQL_PASSWORD}/" /app/ipconfig.php
   rm /app/.configureme
+  mkdir -p /app/uploads/{archive,customer_files,temp/mpdf}
   chown -R root:$APPLICATION_USER /app
   chmod -R 775 /app/{uploads,ipconfig.php}; chmod 775 /app/application/{config,logs}
   composer install -d /app
