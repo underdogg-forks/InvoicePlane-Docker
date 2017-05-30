@@ -4,7 +4,7 @@
 # Set your URL without trailing slash here, e.g. http://your-domain.com
 # If you use a subdomain, use http://subdomain.your-domain.com
 # If you use a subfolder, use http://your-domain.com/subfolder
-IP_URL=
+IP_URL=%{IP_URL}
 
 # Having problems? Enable debug by changing the value to 'true' to enable advanced logging
 ENABLE_DEBUG=false
@@ -32,7 +32,7 @@ ENABLE_INVOICE_DELETION=false
 DISABLE_READ_ONLY=false
 
 # Sumex Config
-SUMEX_URL=http://192.168.56.101:8080/
+SUMEX_URL=%{SUMEX_URL}
 
 
 ##
