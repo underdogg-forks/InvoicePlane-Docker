@@ -12,7 +12,7 @@ fi
 
 if [ -f /app/.configureme ] && [ "$IMPORT_DATA" == "true" ]
 then
-  until ";" | mysql -uroot -p${MYSQL_ROOT_PASSWORD} -hmariadb
+  until echo ";" | mysql -uroot -p${MYSQL_ROOT_PASSWORD} -hmariadb
   do
     echo "Database isn't ready yet, waiting"
     sleep 5
