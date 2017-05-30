@@ -26,10 +26,10 @@ fi
 if [ -f /app/.configureme ]
 then
   cp /invoiceplane_setup/ipconfig.php /app/
-  sed -i "s°%{IP_USER}°${MYSQL_USER}°" /app/ipconfig.php
-  sed -i "s°%{IP_PASSWORD}°${MYSQL_PASSWORD}°" /app/ipconfig.php
-  sed -i "s°%{IP_URL}°${IP_URL}°" /app/ipconfig.php
-  sed -i "s°%{SUMEX_URL}°${SUMEX_URL}°" /app/ipconfig.php
+  sed -i "s|%{IP_USER}|${MYSQL_USER}|" /app/ipconfig.php
+  sed -i "s|%{IP_PASSWORD}|${MYSQL_PASSWORD}|" /app/ipconfig.php
+  sed -i "s|%{IP_URL}|${IP_URL}|" /app/ipconfig.php
+  sed -i "s|%{SUMEX_URL}|${SUMEX_URL}|" /app/ipconfig.php
   rm /app/.configureme
   mkdir -p /app/uploads/{archive,customer_files,temp/mpdf}
   chown -R root:$APPLICATION_USER /app
