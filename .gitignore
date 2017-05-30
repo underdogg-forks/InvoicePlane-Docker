@@ -2,3 +2,4 @@ data/*
 !data/.gitkeep
 !data/logs/.gitkeep
 !data/mysql/.gitkeep
+dump.sql

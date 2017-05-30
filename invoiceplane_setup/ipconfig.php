@@ -16,7 +16,7 @@ REMOVE_INDEXPHP=false
 # These database settings are set during the initial setup
 DB_HOSTNAME=mariadb
 DB_USERNAME=%{IP_USER}
-DB_PASSWORD=%{IP_USER}
+DB_PASSWORD=%{IP_PASSWORD}
 DB_DATABASE=invoiceplane
 DB_PORT=3306
 
