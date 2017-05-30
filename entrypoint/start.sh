@@ -7,7 +7,7 @@ then
     echo "Database isn't ready yet, waiting"
     sleep 5
   done
-  echo "GRANT ALL PRIVILEGES ON invoiceplane.* TO invoiceplane@'%';" | mysql -uroot -p${MYSQL_ROOT_PASSWORD} -hmariadb
+  echo "GRANT ALL PRIVILEGES ON invoiceplane.* TO ${MYSQL_USER}@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';" | mysql -uroot -p${MYSQL_ROOT_PASSWORD} -hmariadb
 fi
 
 if [ -f /app/.configureme ] && [ "$IMPORT_DATA" == "true" ]
