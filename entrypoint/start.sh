@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f /app/.configureme ] && [ "$FIRST_INSTALL" == "true" || "$IMPORT_DATA" == "true" ]
+if [ -f /app/.configureme ] && [ "$FIRST_INSTALL" == "true" ] || [ "$IMPORT_DATA" == "true" ]
 then
   until echo "CREATE DATABASE invoiceplane;" | mysql -uroot -p${MYSQL_ROOT_PASSWORD} -hmariadb
   do
