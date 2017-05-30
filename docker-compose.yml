@@ -11,6 +11,8 @@ services:
     - ./data/uploads/:/app/uploads
     depends_on:
     - mariadb
+    cap_add:
+    - SYS_PTRACE
   mariadb:
     image: mariadb
     env_file: .env.production
